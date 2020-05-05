@@ -46,7 +46,6 @@ module.exports = class extends Generator {
 
   writing() {
     const src = path.join(this.templatePath("src"), "**/*");
-    console.log("src -->", src);
     const staticFiles = glob
       .sync(src, { nodir: true })
       .map(filePath => filePath.replace(this.templatePath("src") + "/", "src/"))
@@ -72,7 +71,10 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      npm: true,
+      bower: false
+    });
   }
 
   end() {
