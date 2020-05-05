@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Ari Lerner",
+      "authorEmail": "me@ari.io",
+      "authorUrl": "https://willcodeforfoo.com"
+    }
+  }
+}
