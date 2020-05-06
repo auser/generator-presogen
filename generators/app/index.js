@@ -66,7 +66,7 @@ module.exports = class extends Generator {
     this.writeTemplates({
       "_cli.js": "cli.js",
       "_package.json": "package.json",
-      "src/deck.mdx": "src/mdx"
+      "src/deck.mdx": "src/deck.mdx"
     });
   }
 
@@ -79,9 +79,6 @@ module.exports = class extends Generator {
 
   end() {
     const opts = { cwd: this.config.get("srcDir") };
-    this.log(`Getting dependencies`);
-    this.spawnCommandSync("make", ["get-deps"], opts);
-
     this.log("Initializing git repository");
     this.spawnCommandSync("git", ["init", "--quiet"], opts);
     this.log("Adding all files");
