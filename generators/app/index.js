@@ -60,7 +60,8 @@ module.exports = class extends Generator {
       ...staticFiles,
       _gitignore: ".gitignore",
       "_gatsby-config.js": "gatsby-config.js",
-      "src/theme.js": "src/theme.js"
+      "src/theme.js": "src/theme.js",
+      "lib/*": "lib"
     });
 
     this.writeTemplates({
